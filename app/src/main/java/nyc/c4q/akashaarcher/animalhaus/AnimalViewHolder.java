@@ -39,7 +39,7 @@ public class AnimalViewHolder extends RecyclerView.ViewHolder {
         view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               view.setBackgroundColor(Color.parseColor(animal.getBackground()));
+                view.setBackgroundColor(Color.parseColor(animal.getBackground()));
             }
         });
     }
