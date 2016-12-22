@@ -1,5 +1,6 @@
 package nyc.c4q.akashaarcher.animalhaus;
 
+import android.content.Context;
 import android.graphics.Color;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -13,11 +14,12 @@ import nyc.c4q.akashaarcher.animalhaus.model.Animal;
  * Created by akashaarcher on 12/21/16.
  */
 
+
 public class AnimalViewHolder extends RecyclerView.ViewHolder {
 
     private final View view;
     private TextView tvName;
-
+    private Context context;
 
 
     public AnimalViewHolder(ViewGroup parent) {
@@ -39,7 +41,7 @@ public class AnimalViewHolder extends RecyclerView.ViewHolder {
         view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                view.setBackgroundColor(Color.parseColor(animal.getBackground()));
+               view.setBackgroundColor(Color.parseColor(animal.getBackground()));
             }
         });
     }

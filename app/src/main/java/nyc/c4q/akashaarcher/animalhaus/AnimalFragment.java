@@ -39,7 +39,6 @@ public class AnimalFragment extends Fragment {
     private List<Animal> animalList;
     private AnimalAdapter adapter;
 
-
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,7 +47,6 @@ public class AnimalFragment extends Fragment {
             Toast.makeText(getActivity(), "You are connected to the internet", Toast.LENGTH_SHORT).show();
         } else {
             Toast.makeText(getActivity(), "You are not connected to the internet", Toast.LENGTH_SHORT).show();
-
         }
 
     }
@@ -59,7 +57,7 @@ public class AnimalFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_animal, container, false);
 
-       animalList = new ArrayList<>();
+        animalList = new ArrayList<>();
 
         adapter = new AnimalAdapter(getContext());
         RecyclerView postRecyclerView = (RecyclerView) view.findViewById(R.id.animal_rv);
@@ -107,5 +105,6 @@ public class AnimalFragment extends Fragment {
         }
         return false;
     }
+
 
 }
